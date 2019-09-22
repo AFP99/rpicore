@@ -197,13 +197,17 @@ public:
         assert(consensus.hashGenesisBlock == uint256("0x0000b712bda549469a4533c0827bd8263299cd2d13030b15e72d93a3e094e914"));
         assert(genesis.hashMerkleRoot == uint256("0x768512611033b4e7af714b9312d1a0e529b2fb4efd9b99d406403012df093073"));
 
-        vSeeds.push_back(CDNSSeedData("seed1.rpicoin.com", "seed1.rpicoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed2.rpicoin.com", "seed2.rpicoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed3.rpicoin.com", "seed3.rpicoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed4.rpicoin.com", "seed4.rpicoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed5.rpicoin.com", "seed5.rpicoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed6.rpicoin.com", "seed6.rpicoin.com"));
-        vSeeds.push_back(CDNSSeedData("seed7.rpicoin.com", "seed7.rpicoin.com"));
+        // AP, Seeder Test, 22.09.2019 , remove all other nodes. There should be at least DNS Seeder online 
+
+        vSeeds.push_back(CDNSSeedData("munka10.pl", "seeder1.munka10.pl"));
+        
+        // vSeeds.push_back(CDNSSeedData("seed1.rpicoin.com", "seed1.rpicoin.com"));
+        // vSeeds.push_back(CDNSSeedData("seed2.rpicoin.com", "seed2.rpicoin.com"));
+        // vSeeds.push_back(CDNSSeedData("seed3.rpicoin.com", "seed3.rpicoin.com"));
+        // vSeeds.push_back(CDNSSeedData("seed4.rpicoin.com", "seed4.rpicoin.com"));
+        // vSeeds.push_back(CDNSSeedData("seed5.rpicoin.com", "seed5.rpicoin.com"));
+        // vSeeds.push_back(CDNSSeedData("seed6.rpicoin.com", "seed6.rpicoin.com"));
+        // vSeeds.push_back(CDNSSeedData("seed7.rpicoin.com", "seed7.rpicoin.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 60);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 122);
